@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PREVIEW</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+#movingImage {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.1s linear;
+    }
+  </style>
+</head>
+<body>
+    <img id="movingImage" src="righth.PNG" alt="Randomly Moving Image">
+    <script>
+      const img = document.getElementById('movingImage');
+  
+      function moveImage() {
+        const x = Math.random() * window.innerWidth -250;
+        const y = Math.random() * window.innerHeight -250;
+        img.style.transform = `translate(${x}px, ${y}px)`;
+      }
+  
+      setInterval(moveImage, 100); // Move every 100 milliseconds
+    </script>
+</body>
+  <div class="orbit-container">
+    <img src="lefth.PNG" alt="Orbiting Image" class="orbiting-image">
+  </div>
+</body>
+</html>
