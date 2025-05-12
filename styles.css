@@ -55,7 +55,7 @@ canvas {
     left: 200px;
     transform: translate(20%, 30%);
     color: yellow; /* Text color */
-    font-size: 20px; /* Adjust text size */
+    font-size: 17px; /* Adjust text size */
     z-index: 1; /* Ensure text is on top */
 }
 
